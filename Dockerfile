@@ -1,6 +1,6 @@
 FROM node:10-slim
 
-LABEL maintainer="Divas Digital - Projeto Integrador"
+LABEL maintainer="Bruno Souza <bruno@bgsouza.com>"
 
 WORKDIR /usr/app
 COPY . .
