@@ -110,7 +110,7 @@ pipeline {
 
         }
 
-        stage('Deploy to Producao') {
+        stage('Deploy to Prod.') {
             agent {  
                 node {
                     label 'prod'
