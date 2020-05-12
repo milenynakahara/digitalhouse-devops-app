@@ -94,6 +94,10 @@ pipeline {
                         docker.withRegistry('https://300903640416.dkr.ecr.us-east-1.amazonaws.com', 'ecr:us-east-1:digitals3') {
                             docker.image('digitalhouse-devops').pull()
                         }
+                        echo 'Deploy para Desenvolvimento'
+                        sh "hostname"
+                        sh "docker stop app1"
+                        sh "docker rm app1"
                         //sh "docker run -d --name app1 -p 8030:3000 933273154934.dkr.ecr.us-east-1.amazonaws.com/digitalhouse-devops:latest"
                         withCredentials([[$class:'AmazonWebServicesCredentialsBinding' 
                             , credentialsId: 'dh-pi-divasdigital-homolog']]) {
